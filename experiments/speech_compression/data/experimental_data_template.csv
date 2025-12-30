@@ -1,0 +1,4 @@
+participant_id,session_date,condition,audio_file,transcript_file,recording_duration_seconds,word_count,notes
+P001,2026-01-15,virtue,P001_virtue.wav,P001_virtue.txt,180,245,"Participant seemed engaged"
+P001,2026-01-15,vice,P001_vice.wav,P001_vice.txt,182,231,"Participant showed discomfort"
+P001,2026-01-15,neutral,P001_neutral.wav,P001_neutral.txt,178,198,"Neutral baseline"
