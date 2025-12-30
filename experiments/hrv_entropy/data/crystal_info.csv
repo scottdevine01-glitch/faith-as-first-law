@@ -1,0 +1,5 @@
+crystal_id,crystal_type,mass_g,dimensions_mm,purity_score,resonant_frequency_hz,notes
+QZ001,quartz,125.3,"40x25x15",0.95,32768,"Clear quartz, polished"
+GL001,glass,124.8,"40x25x15",1.00,0,"Identical glass placebo"
+QZ002,quartz,126.1,"41x26x16",0.93,32750,"Slight inclusion"
+GL002,glass,125.6,"41x26x16",1.00,0,"Matched placebo"
