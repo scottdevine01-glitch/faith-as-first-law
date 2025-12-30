@@ -1,0 +1,4 @@
+participant_id,session_date,condition,object_type,recording_start,recording_end,ecg_file,rr_file,recording_duration_seconds,sampling_rate_hz,notes
+P001,2026-01-15,compassion,crystal,09:00,09:15,P001_compassion_crystal.edf,P001_compassion_crystal_rr.csv,900,1000,"Good signal quality"
+P001,2026-01-16,resentment,placebo,09:00,09:15,P001_resentment_placebo.edf,P001_resentment_placebo_rr.csv,900,1000,"Minor movement artifact"
+P001,2026-01-17,neutral,none,09:00,09:15,P001_neutral_none.edf,P001_neutral_none_rr.csv,900,1000,"Clean recording"
