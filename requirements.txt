@@ -1,0 +1,36 @@
+# Core dependencies for all experiments
+pandas>=1.5.0
+numpy>=1.23.0
+scipy>=1.9.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
+statsmodels>=0.13.0
+jupyter>=1.0.0
+ipython>=8.0.0
+
+# Data handling
+openpyxl>=3.0.0
+h5py>=3.0.0
+pyarrow>=10.0.0
+
+# Network analysis (for social networks experiment)
+networkx>=3.0
+python-louvain>=0.16
+
+# Machine learning (for AI policies experiment)
+scikit-learn>=1.1.0
+torch>=2.0.0
+tensorflow>=2.10.0  # or tensorflow-cpu
+gymnasium>=0.28.0
+stable-baselines3>=2.0.0
+
+# Bio-signal processing (for HRV experiment)
+heartpy>=1.2.0
+neurokit2>=0.2.0
+wfdb>=4.0.0
+
+# Development tools
+black>=22.0.0
+flake8>=6.0.0
+pytest>=7.0.0
+pytest-cov>=4.0.0
