@@ -1,0 +1,4 @@
+participant_id,age,gender,education,consent_date,condition_order,notes
+P001,32,F,MA,2026-01-15,"virtue,vice,neutral","No issues"
+P002,28,M,BA,2026-01-16,"vice,neutral,virtue","Minor technical issue"
+P003,45,F,PHD,2026-01-17,"neutral,virtue,vice",""
