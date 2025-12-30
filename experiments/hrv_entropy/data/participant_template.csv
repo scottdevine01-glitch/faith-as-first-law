@@ -1,0 +1,4 @@
+participant_id,age,gender,bmi,meditation_experience_years,condition_order,crystal_condition_order,notes
+P001,32,F,22.5,2,"compassion,resentment,neutral","quartz,glass,none","Regular meditator"
+P002,28,M,24.1,0,"resentment,neutral,compassion","glass,none,quartz","No prior experience"
+P003,45,F,21.8,10,"neutral,compassion,resentment","none,quartz,glass","Advanced practitioner"
