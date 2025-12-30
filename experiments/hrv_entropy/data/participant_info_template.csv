@@ -1,0 +1,4 @@
+participant_id,age,gender,education,consent_date,condition_order,hrv_experience,meditation_experience_years,notes
+P001,32,F,MA,2026-01-15,"compassion,resentment,neutral",beginner,2,"No health issues"
+P002,28,M,BA,2026-01-16,"resentment,neutral,compassion",intermediate,5,"Occasional meditation"
+P003,45,F,PHD,2026-01-17,"neutral,compassion,resentment",advanced,10,"Regular meditator"
