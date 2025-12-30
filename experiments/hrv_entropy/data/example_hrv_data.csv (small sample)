@@ -1,0 +1,7 @@
+participant_id,condition,crystal_condition,sample_entropy,hrv_lf_hf_ratio,hrv_rmssd
+example_1,compassion,quartz,1.12,1.45,42.3
+example_1,resentment,glass,1.85,0.85,28.7
+example_1,neutral,none,1.45,1.10,35.2
+example_2,compassion,glass,1.18,1.40,40.8
+example_2,resentment,none,1.92,0.82,27.9
+example_2,neutral,quartz,1.42,1.15,36.5
