@@ -1,0 +1,41 @@
+{
+  "experiment_name": "AI Policies A1-A2",
+  "description": "Test whether AEP-aligned AI develops more compressible, generalizable policies",
+  "predictions": ["A1", "A2"],
+  
+  "training": {
+    "epochs": 1000,
+    "hidden_dim": 128,
+    "learning_rate": 0.001,
+    "aep_lambda": 0.1,
+    "environments": ["moral_gridworld", "prisoner_dilemma"],
+    "save_interval": 100
+  },
+  
+  "analysis": {
+    "compression_methods": ["gzip", "pruning"],
+    "pruning_amounts": [0.1, 0.3, 0.5],
+    "statistical_tests": ["t-test", "mann-whitney"],
+    "significance_level": 0.05
+  },
+  
+  "generalization": {
+    "test_scenarios": ["novel", "adversarial", "noisy"],
+    "n_tests": 100,
+    "metrics": ["success_rate", "reward", "efficiency", "fairness"]
+  },
+  
+  "output": {
+    "save_trained_agents": true,
+    "save_training_logs": true,
+    "save_analysis_results": true,
+    "generate_plots": true,
+    "report_format": ["json", "txt", "md"]
+  },
+  
+  "reproducibility": {
+    "random_seed": 42,
+    "deterministic": true,
+    "log_all_random_states": true
+  }
+}
