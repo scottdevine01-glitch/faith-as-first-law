@@ -5,6 +5,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.TBD.svg)](https://doi.org/10.5281/zenodo.TBD)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 
 ---
 
@@ -17,141 +18,162 @@ This repository contains the complete experimental framework for testing the hyp
 
 The paper proposes that **Faith**—defined as the algorithmic prior \( P(U) \propto 2^{-K(U)} \)—is the optimal prior for physics, cosmology, ethics, and materials science. Under this prior, the universe is expected to be compressible, coherent, and anti-entropic.
 
-This repository provides:
-- 🔬 **Experimental protocols** for 10 falsifiable predictions
-- 📊 **Analysis scripts** for complexity/entropy measurements
-- 💾 **Data templates** for consistent recording
-- 🤖 **AI simulation code** for moral policy compression
-- 📈 **Statistical analysis plans** with pre-registration templates
+This repository provides **10 falsifiable predictions** with complete experimental protocols across five domains:
 
-## 🧪 Predictions Tested
+1. **Cosmic predictions** - Testing cosmological implications
+2. **Biophysical predictions** - Testing moral thermodynamics  
+3. **Social predictions** - Testing network coherence
+4. **Material predictions** - Testing crystal amplification
+5. **AI predictions** - Testing algorithmic ethics
 
-| Domain | Prediction | Status |
-|--------|------------|--------|
-| **Cosmic** | Cosmic compression factor \( R(z) \) decreases with time | Future (CMB-S4, LSST) |
-| **Cosmic** | \( \Lambda \propto m_\nu^4 \) exactly | Ongoing (KATRIN, Project 8) |
-| **Cosmic** | CMB excess power at \( l=2 \) (28-Gyr periodicity) | Ready (Planck/ACT reanalysis) |
-| **Biophysical** | Virtuous speech compresses more than vicious speech | Ready (gzip analysis) |
-| **Biophysical** | HRV coherence higher in faithful states | Ready (HRV monitoring) |
-| **Social** | High-trust networks are more compressible | Ready (graph compression) |
-| **Material** | Quartz crystal amplifies HRV coherence | Ready (double-blind study) |
-| **Material** | Intention+crystal increases water \( T_2 \) relaxation | Ready (NMR protocol) |
-| **Material** | Crystal grids reduce RNG entropy during meditation | Ready (quantum RNG) |
-| **AI** | AEP-trained AI has more compressible policies | Ready (RL simulation) |
-| **AI** | Virtuous AI generalizes better in moral dilemmas | Ready (generalization tests) |
+## 🧪 Complete Experiment Suite
 
-## 📁 Repository Structure
-```
-faith-as-first-law/
-├──experiments/              # Experimental protocols by domain
-│├── speech_compression/   # Prediction B1: Virtuous speech compression
-│├── hrv_entropy/          # Predictions B2, M1: HRV coherence
-│├── social_networks/      # Prediction B3: Network compressibility
-│├── rng_entropy/          # Prediction M3: RNG entropy reduction
-│└── ai_policies/          # Predictions A1-A2: AI policy compression
-├──analysis/                 # Statistical analysis tools
-│├── statistical_tests.R   # R scripts for all tests
-│├── compression_utils.py  # Python compression helpers
-│└── plotting_functions.py # Visualization utilities
-├──data/                     # Data handling
-│├── templates/            # Empty CSV templates
-│└── example/              # Sample datasets
-├──paper/                    # Paper-related materials
-│└── appendices/           # Complete appendices
-├──LICENSE                   # MIT License
-└──README.md                 # This file
-```
+| Experiment | Predictions Tested | Status | Key Files |
+|------------|-------------------|--------|-----------|
+| **Speech Compression** | B1: Virtuous speech compresses more | ✅ Complete | `run_speech_study.py`, `analysis.py` |
+| **HRV Entropy** | B2, M1: HRV coherence in faithful states | ✅ Complete | `run_hrv_study.py`, `analysis_hrv.py` |
+| **Social Networks** | B3: High-trust networks are more compressible | ✅ Complete | `analyze_networks.py` |
+| **RNG Entropy** | M3: Crystal grids reduce RNG entropy | ✅ Complete | `run_rng_experiment.py` |
+| **AI Policies** | A1-A2: Virtuous AI policies are more compressible | ✅ Complete | `train_ai_agents.py` |
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
-### 1. Clone the Repository
+### 1. Clone and Setup
 ```bash
 git clone https://github.com/scottdevine/faith-as-first-law.git
 cd faith-as-first-law
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -e .[full]
 ```
 
-### 2. Install Dependencies
+### 2. Run All Experiments (Example Data)
 
 ```bash
-# Python dependencies
-pip install -r requirements.txt
+# Run all experiments with example data
+python run_all_experiments.py --all
 
-# R dependencies (optional)
-Rscript install_dependencies.R
+# Run specific experiments
+python run_all_experiments.py --experiment speech_compression --experiment hrv_entropy
 ```
 
-### 3. Run an Example Experiment
+### 3. Analyze Results
 
-Start with the simplest test (Prediction B1: speech compression):
+```bash
+# Aggregate results from all experiments
+python aggregate_results.py --results-dir results_all
+
+# Check experiment dependencies
+python run_all_experiments.py --check-deps
+```
+
+## 📁 Repository Structure
+
+```
+faith-as-first-law/
+├── run_all_experiments.py          # Run all experiments
+├── aggregate_results.py            # Meta-analysis of all results
+├── experiments/                    # All experimental protocols
+│   ├── speech_compression/        # Prediction B1
+│   ├── hrv_entropy/               # Predictions B2, M1  
+│   ├── social_networks/           # Prediction B3
+│   ├── rng_entropy/               # Prediction M3
+│   └── ai_policies/               # Predictions A1-A2
+├── analysis/                       # Shared analysis utilities
+│   ├── compression_utils.py       # Compression analysis
+│   ├── statistical_tests.R        # R statistical tests
+│   └── plotting_functions.py      # Visualization utilities
+├── data/                           # Data templates and examples
+├── paper/                          # Paper and appendices
+└── docs/                           # Documentation
+```
+
+## 🔬 Experiment Details
+
+### 1. Speech Compression (Prediction B1)
+
+Hypothesis: Virtuous speech compresses more than vicious speech.
 
 ```bash
 cd experiments/speech_compression
-python run_speech_study.py --condition virtue --participants 5
+python run_speech_study.py --example
+python analysis.py --data results/speech_compression_results.csv
 ```
 
-### 4. Analyze Results
+### 2. HRV Entropy (Predictions B2, M1)
+
+Hypothesis: Faithful states (meditation) reduce heart rate variability entropy.
 
 ```bash
-cd ../analysis
-Rscript statistical_tests.R --experiment speech --output results/
+cd experiments/hrv_entropy
+python run_hrv_study.py --test
 ```
 
-## 🔬 Quick Start: Test a Prediction
+### 3. Social Networks (Prediction B3)
 
-Example: Test Virtuous Speech Compression (Prediction B1)
+Hypothesis: High-trust social networks are more algorithmically compressible.
+
+```bash
+cd experiments/social_networks
+python analyze_networks.py --example
+```
+
+### 4. RNG Entropy (Prediction M3)
+
+Hypothesis: Crystal grids reduce quantum RNG entropy during group meditation.
+
+```bash
+cd experiments/rng_entropy
+python run_rng_experiment.py --simulate
+```
+
+### 5. AI Policies (Predictions A1-A2)
+
+Hypothesis: Faith-aligned AI agents develop more compressible, ethical policies.
+
+```bash
+cd experiments/ai_policies
+python train_ai_agents.py --quick-test
+```
+
+### 📊 Expected Results
+
+If the Faith hypothesis is correct, we expect:
+
+1. Speech compression:  C_R(virtue) < C_R(vice)
+2. HRV entropy: Meditation < Stress in sample entropy
+3. Network compression: High-trust < Low-trust in graph compressibility
+4. RNG entropy: Meditation < Control in Shannon entropy
+5. AI policies: Faith-aligned < Reward-maximizing in policy size
+
+### 📈 Data Analysis Pipeline
 
 ```python
-from compression_utils import analyze_speech_compression
+# Example: Analyze speech compression results
+from analysis.compression_utils import CompressionAnalyzer
 
-# Load transcriptions
-virtue_text = open("data/virtue_narrative.txt").read()
-vice_text = open("data/vice_narrative.txt").read()
+analyzer = CompressionAnalyzer()
+results = analyzer.text_compressibility("Sample virtuous text")
+print(f"Compression ratio: {results['gzip_ratio']:.3f}")
 
-# Compute compression ratios
-results = analyze_speech_compression([virtue_text, vice_text], 
-                                     labels=['virtue', 'vice'])
-
-print(f"Virtue compression ratio: {results['virtue']['C_R']:.3f}")
-print(f"Vice compression ratio: {results['vice']['C_R']:.3f}")
-print(f"Difference: {results['virtue']['C_R'] - results['vice']['C_R']:.3f}")
+# Calculate effect sizes across experiments
+python aggregate_results.py --results-dir my_results/
 ```
-
-Expected Result:
-
-```
-Virtue compression ratio: 0.415
-Vice compression ratio: 0.521
-Difference: -0.106 (virtue compresses more)
-```
-
-### 📊 Data Collection Templates
-
-Each experiment directory contains CSV templates for consistent data recording:
-
-- participant_info.csv – Demographics and consent
-- experimental_data.csv – Raw measurements
-- analysis_results.csv – Processed outputs
-
-### 📈 Statistical Analysis Plan
-
-All experiments follow a pre-registered analysis plan:
-
-1. Primary Outcome: Pre-specified complexity measure
-2. Sample Size: Calculated for medium effect size (f=0.25) at 80% power
-3. Analysis: Mixed-effects models for within-subjects designs
-4. Correction: Bonferroni-Holm for multiple comparisons
-5. Reporting: APA style with exact p-values and effect sizes
-
-Pre-registration templates are available in paper/preregistration/.
 
 ### 🤝 Contributing
 
-We welcome:
+We welcome contributions! Please see CONTRIBUTING.md for guidelines.
 
-- 🔁 Independent replications (especially cross-cultural)
-- 🔧 Code improvements and optimizations
-- 📖 Documentation enhancements
-- 🐛 Bug reports via GitHub Issues
+### Adding New Experiments
+
+1. Create a new directory in experiments/
+2. Include: README, protocol script, analysis script, data templates
+3. Add to run_all_experiments.py
+4. Submit a pull request
 
 ### 📚 Citation
 
@@ -169,24 +191,22 @@ If you use this code in your research, please cite:
 
 ### 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+MIT License - see LICENSE for details.
 
 ### 📬 Contact
 
-For questions, collaboration requests, or replication support:
-
 - Email: scottdevine01@gmail.com
 - GitHub Issues: https://github.com/scottdevine/faith-as-first-law/issues
-- Response Time: 1-2 weeks for non-urgent inquiries
+- Zenodo: https://doi.org/10.5281/zenodo.TBD
 
 ### 🙏 Acknowledgments
 
-- The developers of algorithmic information theory (Kolmogorov, Solomonoff, Chaitin)
+- The developers of algorithmic information theory
 - Researchers bridging physics, biology, and consciousness studies
 - The open-source community for tools that make this work possible
 
 ---
 
-“The universe is not a dying ember. It is a seed. And it is growing.”
+"The universe is not a dying ember. It is a seed. And it is growing."
 
 ```
